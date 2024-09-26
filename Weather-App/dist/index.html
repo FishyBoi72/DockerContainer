@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-5">Fish Weather Report</h1>
+        <div class="row d-flex justify-content-center py-5">
+            <div class="col-md-8 col-lg-6 col-xl-5">
+                <div id="weatherPanel" class="card text-white" style="background-color: #8fc5ff; border-radius: 35px;">
+                    <div class="card-body p-4">
+                        <form id="zipForm" class="mb-4">
+                            <label for="zipCode">Enter Zip Code:</label>
+                            <div class="input-group">
+                                <input type="text" id="zipCode" name="zipCode" class="form-control" required>
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="submit">Get Weather</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="weatherData" class="hidden">
+                            <div class="d-flex">
+                                <h6 class="flex-grow-1" id="city"></h6>
+                                <h6 id="time"></h6>
+                            </div>
+                            <div class="d-flex flex-column text-center mt-5 mb-4">
+                                <h6 class="display-4 mb-0 font-weight-bold"><span id="currentTemp"></span> °F</h6>
+                                <span class="small" style="color: #ffffff;" id="currentConditions"></span>
+                            </div>
+                            <div class="d-flex flex-column text-center mt-3">
+                                <span id="state"></span>
+                                <span id="currentDate"></span>
+                            </div>
+                            <div class="d-flex align-items-center mt-3">
+                                <div class="flex-grow-1" style="font-size: 1rem; text-align: center;">
+                                    <div><i class="fas fa-temperature-high fa-fw"></i> <span id="tempHiLo"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="./dist/app.js"></script>
+</body>
+</html>
